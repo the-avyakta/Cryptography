@@ -1,12 +1,19 @@
-#Encryption
-text=input("Enter the String to encrypt")
-key=1
-data=[chr(ord(i)+key) for i in text]
-print(''.join(data))
+def cryptography():
+    methodv=int(input("Enter method: 0 for encrption and 1 for decryption: "))  
+    method={0: 'Encryption', 1: 'Decryption'}  
+    text=input(f"Enter the String to {method[methodv]}: ")
+    key=int(input(f"Enter Key for {method[methodv]}: "))  
+    if (methodv==0):
+        data=[chr(ord(i)+key) for i in text]
+        print(''.join(data))
+    else:
+            data=[chr(ord(i)-key) for i in text]
+            print(''.join(data))
 
+quit=input("To Quit Press q and any value to Continue: ")
 
-#Decryption
-text=input("Enter the String to encrypt")
-key=1
-data=[chr(ord(i)-key) for i in text]
-print(''.join(data))
+if(quit!='q'):
+    cryptography()
+    quit=input("To Quit Press q and any value to Continue: ")
+
+  
