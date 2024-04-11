@@ -1,4 +1,5 @@
-def cryptography():
+def caesarCipher():
+
     methodv=int(input("Enter method: 0 for encrption and 1 for decryption: "))  
     method={0: 'Encryption', 1: 'Decryption'}  
     text=input(f"Enter the String to {method[methodv]}: ")
@@ -13,7 +14,7 @@ def cryptography():
 quit=input("To Quit Press q and any value to Continue: ")
 
 if(quit!='q'):
-    cryptography()
+    caesarCipher()
     quit=input("To Quit Press q and any value to Continue: ")
 
   
